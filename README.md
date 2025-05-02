@@ -36,5 +36,3 @@ This project automates the process of creating an AWS CloudFormation stack that 
 - `list_stack_resources.py`: Python script to fetch resources created by the stack.
 
 ---
-
-Let me know if you'd like any further updates!

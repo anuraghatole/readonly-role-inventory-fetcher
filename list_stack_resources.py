@@ -3,7 +3,7 @@ import boto3
 # Ask the user to enter the name of the CloudFormation stack
 stack_name = input("Enter your CloudFormation Stack Name: ")
 
-# Create a CloudFormation client using default credentials (like instance role)
+# Create a CloudFormation client using default credentials
 cf = boto3.client('cloudformation')
 
 try:
@@ -11,7 +11,7 @@ try:
     response = cf.describe_stack_resources(StackName=stack_name)
     resources = response['StackResources']
 except Exception as e:
-    # If something goes wrong (like wrong name), show the error and stop the script
+    # If something goes wrong, show the error and stop the script
     print("Error getting stack details:", e)
     exit()
 
